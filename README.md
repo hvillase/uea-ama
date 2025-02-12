@@ -15,5 +15,5 @@ Aprendizaje de máquina para artistas
 ## Recursos
 [Visual Studio Code](https://code.visualstudio.com/): editor de código  
 [ml5](https://ml5js.org/): biblioteca para aprendizaje de máquina  
-[GitHub](https://github.com): plataforma
+[GitHub](https://github.com): plataforma  
 [Git](https://git-scm.com/): sistema de cointrol de versiones de software
