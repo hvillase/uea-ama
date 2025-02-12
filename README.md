@@ -12,3 +12,8 @@ Aprendizaje de máquina para artistas
 ## Semana 10
 ## Semana 11
 ## Semana 12
+## Recursos
+[Visual Studio Code](https://code.visualstudio.com/): editor de código  
+[ml5](https://ml5js.org/): biblioteca para aprendizaje de máquina  
+[GitHub](https://github.com): plataforma
+[Git](https://git-scm.com/): sistema de cointrol de versiones de software
