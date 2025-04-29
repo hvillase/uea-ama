@@ -3,8 +3,9 @@ let video;
 let poses = [];
 let connections;
 let painting;
+let img;
 
-function preload() {
+function preload(){
   // Carga bodyPose modelo
   // Flipped: true solo para efecto espejo
   bodyPose = ml5.bodyPose({flipped:true});
@@ -17,6 +18,10 @@ function mousePressed() {
 function setup() {
   // lienzo de pantalla
   createCanvas(windowWidth, windowHeight);
+  // cargar imagen
+  img = new Image();
+  img.src = "assets/noche_s.jpg";
+  
   // creamos una capa para gráficos con dimensión de pantalla
   painting = createGraphics(windowWidth, windowHeight);
   painting.clear();
@@ -100,7 +105,8 @@ function draw() {
             // figura 1
             if(index1.x < width/2 && index1.y < height/2){
               fill(0, 255, 255);
-              rect(0, (height/2)-130, 130, 130);
+              //rect(0, 0, width/2, height/2);
+              drawingContext.drawImage(img, 0, 0);
             }
             //mano 2
             if (index2.confidence > 0.1) {
@@ -112,11 +118,15 @@ function draw() {
             if(index2.x > width/2 && index2.y < height/2){
               fill(255, 255, 0);
               //rect(width/2, (height/2)-130, 130, 130);
-              textSize(100);
-              text('interacción', width/2, (height/2)-130);
+              textSize(60);
+              text('la palabra nos siga', index2.x, index2.y);
             }
           }
         }
         // aquí colocamos la capa para dibujar hecha con createGraphics
        image(painting, 0, 0); 
       }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
